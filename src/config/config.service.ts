@@ -10,6 +10,7 @@ export const env = {
 
   MONGO_URI: process.env.MONGO_URI as string,
 
+  SALT: process.env.SALT || 21,
   EMAIL_USERNAME: process.env.EMAIL_USERNAME as string,
   EMAIL_PASSWORD: process.env.EMAIL_PASSWORD as string,
   EMAIL_HOST: process.env.EMAIL_HOST,
@@ -26,6 +27,8 @@ export const env = {
   ENCRYPTION_SECRET_KEY: process.env.ENCRYPTION_SECRET_KEY as string,
 
   WHITELIST: process.env.WHITELIST as string,
+
+  FIREBASE_SERVICE_ACCOUNT: "./config/firebase",
 };
 
 export type Env = typeof env;
